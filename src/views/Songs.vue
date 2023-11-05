@@ -131,13 +131,12 @@
       toggleFavorite(song) {
         const index = this.favorites.findIndex(favorite => favorite.id === song.id);
         if (index !== -1) {
-          this.favorites.splice(index, 1); // Remove from favorites if already present
+          this.favorites.splice(index, 1); 
         } else {
-          this.favorites.push(song); // Add to favorites if not present
+          this.favorites.push(song); 
         }
       },
       isFavorite(songId) {
-        // Check if the song with the given id is in favorites
         return this.favorites.some(favorite => favorite.id === songId);
       },
     },
